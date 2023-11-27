@@ -9,5 +9,3 @@ spec:
       port: 3306
   selector:
     io.kompose.service: cronguard-db
-status:
-  loadBalancer: {}

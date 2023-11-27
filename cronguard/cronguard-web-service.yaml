@@ -1,10 +1,6 @@
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    kompose.cmd: kompose convert
-    kompose.version: 1.22.0 (955b78124)
-  creationTimestamp: null
   labels:
     io.kompose.service: cronguard-web
   name: cronguard-web
@@ -16,5 +12,3 @@ spec:
       targetPort: 80
   selector:
     io.kompose.service: cronguard-web
-status:
-  loadBalancer: {}
