@@ -27,13 +27,12 @@ spec:
       containers:
         - image: andreaswendlandt/cronguard-daemon:latest
           name: cronguard-daemon
-          resources: {}
           volumeMounts:
-            - mountPath: /var/log
-              name: cronguard-daemon-claim0
+            - name: cronguardlog
+              mountPath: /var/log
       restartPolicy: Always
       volumes:
-        - name: cronguard-daemon-claim0
-          persistentVolumeClaim:
-            claimName: cronguard-daemon-claim0
+        - name: cronguardlog
+          hostPath:
+            path: /tmp/log
 status: {}
