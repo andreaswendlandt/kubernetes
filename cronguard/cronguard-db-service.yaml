@@ -8,4 +8,4 @@ spec:
     - name: "3306"
       port: 3306
   selector:
-    io.kompose.service: cronguard-db
+    cronguard.service: cronguard-db

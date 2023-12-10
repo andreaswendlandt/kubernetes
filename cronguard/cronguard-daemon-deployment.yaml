@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: cronguard-daemon
+    cronguard.service: cronguard-daemon
   name: cronguard-daemon
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: cronguard-daemon
+      cronguard.service: cronguard-daemon
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: cronguard-daemon
+        cronguard.service: cronguard-daemon
     spec:
       containers:
         - image: andreaswendlandt/cronguard-daemon:latest

@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: cronguard-db
+    cronguard.service: cronguard-db
   name: cronguard-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: cronguard-db
+      cronguard.service: cronguard-db
   strategy: {}
   template:
     metadata:
       labels:
-        io.kompose.service: cronguard-db
+        cronguard.service: cronguard-db
     spec:
       containers:
         - image: andreaswendlandt/cronguard-db:latest
