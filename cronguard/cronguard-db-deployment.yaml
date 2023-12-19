@@ -9,7 +9,6 @@ spec:
   selector:
     matchLabels:
       cronguard.service: cronguard-db
-  strategy: {}
   template:
     metadata:
       labels:
@@ -18,5 +17,4 @@ spec:
       containers:
         - image: andreaswendlandt/cronguard-db:latest
           name: cronguard-db
-          resources: {}
       restartPolicy: Always
